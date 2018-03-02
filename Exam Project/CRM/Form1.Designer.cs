@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnCustomerInfo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnCustomerInfo
+            // 
+            this.btnCustomerInfo.Location = new System.Drawing.Point(23, 12);
+            this.btnCustomerInfo.Name = "btnCustomerInfo";
+            this.btnCustomerInfo.Size = new System.Drawing.Size(93, 59);
+            this.btnCustomerInfo.TabIndex = 0;
+            this.btnCustomerInfo.Text = "Customer Information";
+            this.btnCustomerInfo.UseVisualStyleBackColor = true;
+            this.btnCustomerInfo.Click += new System.EventHandler(this.btnCustomerInfo_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(573, 319);
+            this.Controls.Add(this.btnCustomerInfo);
+            this.Name = "Form1";
+            this.Text = "Joe\'s Automotive CRM";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCustomerInfo;
     }
 }
 

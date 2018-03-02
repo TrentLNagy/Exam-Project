@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class Form1 : Form
+    public partial class CustomerInfo : Form
     {
-        public Form1()
+        public CustomerInfo()
         {
             InitializeComponent();
-        }
-
-        private void btnCustomerInfo_Click(object sender, EventArgs e)
-        {
-            CustomerInfo customerInfo = new CustomerInfo();
-            customerInfo.ShowDialog();
         }
     }
 }
