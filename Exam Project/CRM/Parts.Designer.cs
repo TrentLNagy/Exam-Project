@@ -1,6 +1,6 @@
 ﻿namespace CRM
 {
-    partial class CustomerInfo
+    partial class Parts
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "CustomerInfo";
+            this.Text = "Parts";
         }
 
         #endregion

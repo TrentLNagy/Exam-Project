@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class CustomerInfo : Form
+    public partial class Parts : Form
     {
-        public CustomerInfo()
+        public Parts()
         {
             InitializeComponent();
         }
