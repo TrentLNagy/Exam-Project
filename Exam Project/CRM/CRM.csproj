@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRMDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRMDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CustomerAndVehicleInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +115,17 @@
     </None>
     <None Include="CRMDBDataSet.xss">
       <DependentUpon>CRMDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDBDataSet1.xsc">
+      <DependentUpon>CRMDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMDBDataSet1.xss">
+      <DependentUpon>CRMDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
