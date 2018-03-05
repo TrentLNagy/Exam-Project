@@ -17,16 +17,15 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void btnCustomerInfo_Click(object sender, EventArgs e)
+        private void btnCustomers_Click(object sender, EventArgs e)
         {
-            CustomerAndVehicleInfo customerVehicleInfo = new CustomerAndVehicleInfo();
-            customerVehicleInfo.ShowDialog();
+            Customer customer = new Customer();
+            customer.ShowDialog();
         }
 
-        private void btnParts_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Parts parts = new Parts();
-            parts.ShowDialog();
+            this.Close();
         }
     }
 }
