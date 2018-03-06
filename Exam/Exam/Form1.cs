@@ -16,5 +16,16 @@ namespace Exam
         {
             InitializeComponent();
         }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

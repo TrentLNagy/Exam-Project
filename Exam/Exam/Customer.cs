@@ -31,5 +31,10 @@ namespace Exam
             this.customerTableAdapter.Fill(this.cRMDBDataSet1.Customer);
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
