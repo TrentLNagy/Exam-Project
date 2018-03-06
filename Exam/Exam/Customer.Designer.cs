@@ -88,7 +88,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(21, 15);
+            nameLabel.Location = new System.Drawing.Point(22, 30);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 1;
@@ -97,7 +97,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(65, 12);
+            this.nameTextBox.Location = new System.Drawing.Point(66, 27);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 2;
@@ -105,7 +105,7 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(11, 41);
+            addressLabel.Location = new System.Drawing.Point(12, 56);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(48, 13);
             addressLabel.TabIndex = 2;
@@ -114,7 +114,7 @@
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(65, 38);
+            this.addressTextBox.Location = new System.Drawing.Point(66, 53);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(100, 20);
             this.addressTextBox.TabIndex = 3;
@@ -122,7 +122,7 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(18, 67);
+            phoneLabel.Location = new System.Drawing.Point(19, 82);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(41, 13);
             phoneLabel.TabIndex = 4;
@@ -131,7 +131,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(65, 64);
+            this.phoneTextBox.Location = new System.Drawing.Point(66, 79);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(100, 20);
             this.phoneTextBox.TabIndex = 5;
@@ -139,7 +139,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(24, 93);
+            emailLabel.Location = new System.Drawing.Point(25, 108);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(35, 13);
             emailLabel.TabIndex = 6;
@@ -148,7 +148,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(65, 90);
+            this.emailTextBox.Location = new System.Drawing.Point(66, 105);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(100, 20);
             this.emailTextBox.TabIndex = 7;
@@ -164,9 +164,9 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.customerDataGridView.DataSource = this.customerBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(21, 170);
+            this.customerDataGridView.Location = new System.Drawing.Point(12, 170);
             this.customerDataGridView.Name = "customerDataGridView";
-            this.customerDataGridView.Size = new System.Drawing.Size(244, 220);
+            this.customerDataGridView.Size = new System.Drawing.Size(244, 208);
             this.customerDataGridView.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -201,14 +201,14 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(21, 144);
+            this.txtSearch.Location = new System.Drawing.Point(12, 141);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(162, 20);
             this.txtSearch.TabIndex = 9;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(189, 142);
+            this.btnSearch.Location = new System.Drawing.Point(181, 139);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 10;
@@ -217,7 +217,7 @@
             // 
             // btnAddInfo
             // 
-            this.btnAddInfo.Location = new System.Drawing.Point(284, 142);
+            this.btnAddInfo.Location = new System.Drawing.Point(262, 139);
             this.btnAddInfo.Name = "btnAddInfo";
             this.btnAddInfo.Size = new System.Drawing.Size(75, 43);
             this.btnAddInfo.TabIndex = 11;
@@ -226,7 +226,7 @@
             // 
             // btnChangeInfo
             // 
-            this.btnChangeInfo.Location = new System.Drawing.Point(284, 191);
+            this.btnChangeInfo.Location = new System.Drawing.Point(262, 188);
             this.btnChangeInfo.Name = "btnChangeInfo";
             this.btnChangeInfo.Size = new System.Drawing.Size(75, 43);
             this.btnChangeInfo.TabIndex = 12;
@@ -235,7 +235,7 @@
             // 
             // btnDeleteInfo
             // 
-            this.btnDeleteInfo.Location = new System.Drawing.Point(284, 240);
+            this.btnDeleteInfo.Location = new System.Drawing.Point(262, 237);
             this.btnDeleteInfo.Name = "btnDeleteInfo";
             this.btnDeleteInfo.Size = new System.Drawing.Size(75, 43);
             this.btnDeleteInfo.TabIndex = 13;
@@ -244,7 +244,7 @@
             // 
             // btnInvoices
             // 
-            this.btnInvoices.Location = new System.Drawing.Point(284, 289);
+            this.btnInvoices.Location = new System.Drawing.Point(262, 286);
             this.btnInvoices.Name = "btnInvoices";
             this.btnInvoices.Size = new System.Drawing.Size(75, 43);
             this.btnInvoices.TabIndex = 14;
@@ -253,7 +253,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(284, 338);
+            this.btnClose.Location = new System.Drawing.Point(262, 335);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 43);
             this.btnClose.TabIndex = 15;
@@ -264,7 +264,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(208, 31);
+            this.listBox1.Location = new System.Drawing.Point(207, 27);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 16;
@@ -272,7 +272,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 12);
+            this.label1.Location = new System.Drawing.Point(204, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 17;
@@ -282,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 398);
+            this.ClientSize = new System.Drawing.Size(345, 389);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnClose);
