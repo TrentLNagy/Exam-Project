@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Exam
+namespace The_Real_Exam
 {
     public partial class Customer : Form
     {
@@ -21,14 +21,14 @@ namespace Exam
         {
             this.Validate();
             this.customerBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.cRMDBDataSet1);
+            this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
 
         }
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cRMDBDataSet1.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.cRMDBDataSet1.Customer);
+            // TODO: This line of code loads data into the 'cRMDBDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);
 
         }
 
