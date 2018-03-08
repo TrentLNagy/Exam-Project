@@ -70,6 +70,7 @@
             this.btnVehicles.TabIndex = 13;
             this.btnVehicles.Text = "Vehicles";
             this.btnVehicles.UseVisualStyleBackColor = true;
+            this.btnVehicles.Click += new System.EventHandler(this.btnVehicles_Click);
             // 
             // btnParts
             // 

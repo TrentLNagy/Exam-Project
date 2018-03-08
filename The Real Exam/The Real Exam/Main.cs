@@ -27,5 +27,11 @@ namespace The_Real_Exam
             Customer customer = new Customer();
             customer.ShowDialog();
         }
+
+        private void btnVehicles_Click(object sender, EventArgs e)
+        {
+            Vehicles vehicles = new Vehicles();
+            vehicles.ShowDialog();
+        }
     }
 }

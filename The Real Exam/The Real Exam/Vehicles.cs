@@ -31,5 +31,10 @@ namespace The_Real_Exam
             this.vehiclesTableAdapter.Fill(this.cRMDBDataSet.Vehicles);
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

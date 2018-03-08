@@ -71,6 +71,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.vehiclesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // makeLabel
+            // 
+            makeLabel.AutoSize = true;
+            makeLabel.Location = new System.Drawing.Point(18, 15);
+            makeLabel.Name = "makeLabel";
+            makeLabel.Size = new System.Drawing.Size(37, 13);
+            makeLabel.TabIndex = 1;
+            makeLabel.Text = "Make:";
+            // 
+            // modelLabel
+            // 
+            modelLabel.AutoSize = true;
+            modelLabel.Location = new System.Drawing.Point(16, 41);
+            modelLabel.Name = "modelLabel";
+            modelLabel.Size = new System.Drawing.Size(39, 13);
+            modelLabel.TabIndex = 2;
+            modelLabel.Text = "Model:";
+            // 
+            // yearLabel
+            // 
+            yearLabel.AutoSize = true;
+            yearLabel.Location = new System.Drawing.Point(23, 67);
+            yearLabel.Name = "yearLabel";
+            yearLabel.Size = new System.Drawing.Size(32, 13);
+            yearLabel.TabIndex = 4;
+            yearLabel.Text = "Year:";
+            // 
+            // mileageLabel
+            // 
+            mileageLabel.AutoSize = true;
+            mileageLabel.Location = new System.Drawing.Point(8, 93);
+            mileageLabel.Name = "mileageLabel";
+            mileageLabel.Size = new System.Drawing.Size(47, 13);
+            mileageLabel.TabIndex = 6;
+            mileageLabel.Text = "Mileage:";
+            // 
+            // date_RecievedLabel
+            // 
+            date_RecievedLabel.AutoSize = true;
+            date_RecievedLabel.Location = new System.Drawing.Point(167, 12);
+            date_RecievedLabel.Name = "date_RecievedLabel";
+            date_RecievedLabel.Size = new System.Drawing.Size(82, 13);
+            date_RecievedLabel.TabIndex = 8;
+            date_RecievedLabel.Text = "Date Recieved:";
+            // 
+            // date_ReturnedLabel
+            // 
+            date_ReturnedLabel.AutoSize = true;
+            date_ReturnedLabel.Location = new System.Drawing.Point(169, 38);
+            date_ReturnedLabel.Name = "date_ReturnedLabel";
+            date_ReturnedLabel.Size = new System.Drawing.Size(80, 13);
+            date_ReturnedLabel.TabIndex = 10;
+            date_ReturnedLabel.Text = "Date Returned:";
+            // 
             // cRMDBDataSet
             // 
             this.cRMDBDataSet.DataSetName = "CRMDBDataSet";
@@ -92,15 +146,6 @@
             this.tableAdapterManager.UpdateOrder = The_Real_Exam.CRMDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VehiclesTableAdapter = this.vehiclesTableAdapter;
             // 
-            // makeLabel
-            // 
-            makeLabel.AutoSize = true;
-            makeLabel.Location = new System.Drawing.Point(18, 15);
-            makeLabel.Name = "makeLabel";
-            makeLabel.Size = new System.Drawing.Size(37, 13);
-            makeLabel.TabIndex = 1;
-            makeLabel.Text = "Make:";
-            // 
             // makeTextBox
             // 
             this.makeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Make", true));
@@ -108,15 +153,6 @@
             this.makeTextBox.Name = "makeTextBox";
             this.makeTextBox.Size = new System.Drawing.Size(100, 20);
             this.makeTextBox.TabIndex = 2;
-            // 
-            // modelLabel
-            // 
-            modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(16, 41);
-            modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(39, 13);
-            modelLabel.TabIndex = 2;
-            modelLabel.Text = "Model:";
             // 
             // modelTextBox
             // 
@@ -126,15 +162,6 @@
             this.modelTextBox.Size = new System.Drawing.Size(100, 20);
             this.modelTextBox.TabIndex = 3;
             // 
-            // yearLabel
-            // 
-            yearLabel.AutoSize = true;
-            yearLabel.Location = new System.Drawing.Point(23, 67);
-            yearLabel.Name = "yearLabel";
-            yearLabel.Size = new System.Drawing.Size(32, 13);
-            yearLabel.TabIndex = 4;
-            yearLabel.Text = "Year:";
-            // 
             // yearTextBox
             // 
             this.yearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Year", true));
@@ -142,15 +169,6 @@
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(100, 20);
             this.yearTextBox.TabIndex = 5;
-            // 
-            // mileageLabel
-            // 
-            mileageLabel.AutoSize = true;
-            mileageLabel.Location = new System.Drawing.Point(8, 93);
-            mileageLabel.Name = "mileageLabel";
-            mileageLabel.Size = new System.Drawing.Size(47, 13);
-            mileageLabel.TabIndex = 6;
-            mileageLabel.Text = "Mileage:";
             // 
             // mileageTextBox
             // 
@@ -160,15 +178,6 @@
             this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
             this.mileageTextBox.TabIndex = 7;
             // 
-            // date_RecievedLabel
-            // 
-            date_RecievedLabel.AutoSize = true;
-            date_RecievedLabel.Location = new System.Drawing.Point(167, 12);
-            date_RecievedLabel.Name = "date_RecievedLabel";
-            date_RecievedLabel.Size = new System.Drawing.Size(82, 13);
-            date_RecievedLabel.TabIndex = 8;
-            date_RecievedLabel.Text = "Date Recieved:";
-            // 
             // date_RecievedDateTimePicker
             // 
             this.date_RecievedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vehiclesBindingSource, "Date Recieved", true));
@@ -176,15 +185,6 @@
             this.date_RecievedDateTimePicker.Name = "date_RecievedDateTimePicker";
             this.date_RecievedDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.date_RecievedDateTimePicker.TabIndex = 9;
-            // 
-            // date_ReturnedLabel
-            // 
-            date_ReturnedLabel.AutoSize = true;
-            date_ReturnedLabel.Location = new System.Drawing.Point(169, 38);
-            date_ReturnedLabel.Name = "date_ReturnedLabel";
-            date_ReturnedLabel.Size = new System.Drawing.Size(80, 13);
-            date_ReturnedLabel.TabIndex = 10;
-            date_ReturnedLabel.Text = "Date Returned:";
             // 
             // date_ReturnedDateTimePicker
             // 
@@ -262,6 +262,7 @@
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnInvoices
             // 
