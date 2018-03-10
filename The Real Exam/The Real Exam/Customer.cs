@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace The_Real_Exam
@@ -16,6 +17,8 @@ namespace The_Real_Exam
         {
             InitializeComponent();
         }
+
+        public int maxID = 0;
 
         private void customerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -35,6 +38,38 @@ namespace The_Real_Exam
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = nameTextBox.Text;
+                string address = addressTextBox.Text;
+                string phone = phoneTextBox.Text;
+                string email = emailTextBox.Text;
+
+
+                for (int index = 0; index <= customerDataGridView.TabIndex; index++)
+                {
+                    if (customerDataGridView.RowCount > maxID)
+                    {
+                        maxID++;
+                    }
+                }
+
+                customerTableAdapter.InsertData(maxID, name, address, phone, email);
+                customerTableAdapter.InsertData(maxID + 1, "", "", "", "");
+
+                this.Validate();
+                this.customerBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
+                this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
