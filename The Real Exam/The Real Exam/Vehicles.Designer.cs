@@ -299,6 +299,7 @@
             this.btnAddInfo.TabIndex = 16;
             this.btnAddInfo.Text = "Add info";
             this.btnAddInfo.UseVisualStyleBackColor = true;
+            this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
             // 
             // btnSearch
             // 

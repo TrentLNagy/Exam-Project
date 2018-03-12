@@ -48,23 +48,14 @@ namespace The_Real_Exam
                 string address = addressTextBox.Text;
                 string phone = phoneTextBox.Text;
                 string email = emailTextBox.Text;
-
-
-                for (int index = 0; index <= customerDataGridView.TabIndex; index++)
-                {
-                    if (customerDataGridView.RowCount > maxID)
-                    {
-                        maxID++;
-                    }
-                }
-
+                
+                maxID = customerDataGridView.RowCount;
                 customerTableAdapter.InsertData(maxID, name, address, phone, email);
-                customerTableAdapter.InsertData(maxID + 1, "", "", "", "");
 
                 this.Validate();
                 this.customerBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
-                this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);                
+                this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);
             }
             catch(Exception ex)
             {
