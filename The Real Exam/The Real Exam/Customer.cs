@@ -25,7 +25,6 @@ namespace The_Real_Exam
             this.Validate();
             this.customerBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
-
         }
 
         private void Customer_Load(object sender, EventArgs e)
@@ -39,6 +38,7 @@ namespace The_Real_Exam
         {
             this.Close();
         }
+        
 
         private void btnAddInfo_Click(object sender, EventArgs e)
         {
@@ -48,9 +48,12 @@ namespace The_Real_Exam
                 string address = addressTextBox.Text;
                 string phone = phoneTextBox.Text;
                 string email = emailTextBox.Text;
-                
                 maxID = customerDataGridView.RowCount;
-                customerTableAdapter.InsertData(maxID, name, address, phone, email);
+
+                if (ValidatePhone() == true && ValidateName() == true && ValidateEmail() == true)
+                {
+                    customerTableAdapter.InsertData(maxID, name, "", phone, email);
+                }
 
                 this.Validate();
                 this.customerBindingSource.EndEdit();
@@ -61,6 +64,98 @@ namespace The_Real_Exam
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        /**
+         * ValidatePhone method check the phoneTextBox
+         * to see if it matched human definition of a phone number
+         * 
+         * @return isValid returns either a true or false if conditions are met
+         */
+
+        public bool ValidatePhone()
+        {
+            string phone = phoneTextBox.Text;
+            bool isValid = false;
+
+            if(phone.Length == 13)
+            {
+                foreach(char ch in phone)
+                {
+                    if (char.IsPunctuation(phone, 0) && char.IsPunctuation(phone, 4) && char.IsPunctuation(phone, 8))
+                    {
+                        isValid = true;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Phone number must be in format \"(XXX)XXX-XXXX\"");
+            }
+
+            return isValid;
+        }
+
+        /**
+         * ValidateName method checks to see if there's any
+         * numbers present inside of the nameTextBox.
+         * The initial value isValid is set to true, but if a char
+         * is read as an int, then the isValid will be set to false.
+         * 
+         * @return isValid returns either a true or false if conditions are met
+         */
+
+        private bool ValidateName()
+        {
+            bool isValid = true;
+            string name = nameTextBox.Text;
+
+            foreach(char ch in name)
+            {
+                if (char.IsDigit(ch))
+                {
+                    isValid = false;
+                }
+            }
+
+            if(isValid == false)
+            {
+                MessageBox.Show("Invalid name - must be letters only.");
+            }
+
+            return isValid;
+        }
+
+        /**
+         * ValidateEmail method checks to see if the email is valid, and returns
+         * true or false depending on the outcome.
+         * 
+         * @return isValid returns either a true or false if conditions are met
+         */
+        private bool ValidateEmail()
+        {
+            bool isValid = false;
+            string email = emailTextBox.Text;
+
+            if (email.Contains('@') && email.Contains('.') && email.Length > 5)
+            {
+                isValid = true;
+            }
+            else
+            {
+                MessageBox.Show("Invalid email.");
+            }
+
+            return isValid;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteInfo_Click(object sender, EventArgs e)
+        {
         }
     }
 }

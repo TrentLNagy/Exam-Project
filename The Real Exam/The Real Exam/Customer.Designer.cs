@@ -52,7 +52,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnInvoices = new System.Windows.Forms.Button();
             this.btnDeleteInfo = new System.Windows.Forms.Button();
-            this.btnChangeInfo = new System.Windows.Forms.Button();
             this.btnAddInfo = new System.Windows.Forms.Button();
             this.customerTableAdapter = new The_Real_Exam.CRMDBDataSetTableAdapters.CustomerTableAdapter();
             this.tableAdapterManager = new The_Real_Exam.CRMDBDataSetTableAdapters.TableAdapterManager();
@@ -204,6 +203,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(162, 20);
             this.txtSearch.TabIndex = 11;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
@@ -224,7 +224,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(259, 324);
+            this.btnClose.Location = new System.Drawing.Point(259, 275);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 43);
             this.btnClose.TabIndex = 24;
@@ -234,7 +234,7 @@
             // 
             // btnInvoices
             // 
-            this.btnInvoices.Location = new System.Drawing.Point(259, 275);
+            this.btnInvoices.Location = new System.Drawing.Point(259, 226);
             this.btnInvoices.Name = "btnInvoices";
             this.btnInvoices.Size = new System.Drawing.Size(75, 43);
             this.btnInvoices.TabIndex = 23;
@@ -243,21 +243,13 @@
             // 
             // btnDeleteInfo
             // 
-            this.btnDeleteInfo.Location = new System.Drawing.Point(259, 226);
+            this.btnDeleteInfo.Location = new System.Drawing.Point(259, 177);
             this.btnDeleteInfo.Name = "btnDeleteInfo";
             this.btnDeleteInfo.Size = new System.Drawing.Size(75, 43);
             this.btnDeleteInfo.TabIndex = 22;
             this.btnDeleteInfo.Text = "Delete info";
             this.btnDeleteInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnChangeInfo
-            // 
-            this.btnChangeInfo.Location = new System.Drawing.Point(259, 177);
-            this.btnChangeInfo.Name = "btnChangeInfo";
-            this.btnChangeInfo.Size = new System.Drawing.Size(75, 43);
-            this.btnChangeInfo.TabIndex = 21;
-            this.btnChangeInfo.Text = "Change info";
-            this.btnChangeInfo.UseVisualStyleBackColor = true;
+            this.btnDeleteInfo.Click += new System.EventHandler(this.btnDeleteInfo_Click);
             // 
             // btnAddInfo
             // 
@@ -288,7 +280,6 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnInvoices);
             this.Controls.Add(this.btnDeleteInfo);
-            this.Controls.Add(this.btnChangeInfo);
             this.Controls.Add(this.btnAddInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -337,7 +328,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnInvoices;
         private System.Windows.Forms.Button btnDeleteInfo;
-        private System.Windows.Forms.Button btnChangeInfo;
         private System.Windows.Forms.Button btnAddInfo;
     }
 }
