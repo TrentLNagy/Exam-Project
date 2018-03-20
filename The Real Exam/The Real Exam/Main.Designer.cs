@@ -80,6 +80,7 @@
             this.btnParts.TabIndex = 12;
             this.btnParts.Text = "Parts";
             this.btnParts.UseVisualStyleBackColor = true;
+            this.btnParts.Click += new System.EventHandler(this.btnParts_Click);
             // 
             // btnCustomers
             // 

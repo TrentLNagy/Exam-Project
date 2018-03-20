@@ -43,16 +43,17 @@ namespace The_Real_Exam
         {
             try
             {
-                string make, model, year, mileage;
+                string make, model;
+                int year, mileage;
                 make = makeTextBox.Text;
                 model = modelTextBox.Text;
-                year = yearTextBox.Text;
-                mileage = mileageTextBox.Text;
+                year = int.Parse(yearTextBox.Text);
+                mileage = int.Parse(mileageTextBox.Text);
                 string dateTime1 = date_RecievedDateTimePicker.Text;
                 string dateTime2 = date_ReturnedDateTimePicker.Text;
 
                 maxID = vehiclesDataGridView.RowCount;
-                vehiclesTableAdapter.InsertData(maxID, make, model, 0, 0, System.DateTime.Now, System.DateTime.Now);
+                vehiclesTableAdapter.InsertData(maxID, make, model, year, mileage, System.DateTime.Now, System.DateTime.Now);
 
                 this.Validate();
                 this.vehiclesBindingSource.EndEdit();

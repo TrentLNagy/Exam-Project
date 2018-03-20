@@ -33,5 +33,11 @@ namespace The_Real_Exam
             Vehicles vehicles = new Vehicles();
             vehicles.ShowDialog();
         }
+
+        private void btnParts_Click(object sender, EventArgs e)
+        {
+            Parts parts = new Parts();
+            parts.ShowDialog();
+        }
     }
 }

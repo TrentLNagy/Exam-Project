@@ -52,13 +52,19 @@ namespace The_Real_Exam
 
                 if (ValidatePhone() == true && ValidateName() == true && ValidateEmail() == true)
                 {
-                    customerTableAdapter.InsertData(maxID, name, "", phone, email);
+                    customerTableAdapter.InsertData(maxID, name, address, phone, email);
                 }
 
                 this.Validate();
                 this.customerBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
                 this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);
+                
+                nameTextBox.Clear();
+                addressTextBox.Clear();
+                phoneTextBox.Clear();
+                emailTextBox.Clear();
+                nameTextBox.Focus();
             }
             catch(Exception ex)
             {
@@ -132,6 +138,7 @@ namespace The_Real_Exam
          * 
          * @return isValid returns either a true or false if conditions are met
          */
+
         private bool ValidateEmail()
         {
             bool isValid = false;
@@ -156,6 +163,51 @@ namespace The_Real_Exam
 
         private void btnDeleteInfo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string name = nameTextBox.Text;
+                string address = addressTextBox.Text;
+                string phone = phoneTextBox.Text;
+                string email = emailTextBox.Text;
+
+                int selectedID = customerDataGridView.CurrentCell.RowIndex + 1;
+                customerTableAdapter.DeleteData(selectedID, name, address, phone, email);
+
+                this.Width = 361;
+                this.Validate();
+                this.customerBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
+                this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);
+
+                MessageBox.Show(selectedID.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("Don't try this srsly");
+            }
+
+        }
+
+        private void btnChangeInfo_Click(object sender, EventArgs e)
+        {
+            this.Width = 508;
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Width = 361;
+                this.Validate();
+                this.customerBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.cRMDBDataSet);
+                this.customerTableAdapter.Fill(this.cRMDBDataSet.Customer);
+            }
+            catch
+            {
+                MessageBox.Show("Yeah don't try this");
+            }
+
         }
     }
 }

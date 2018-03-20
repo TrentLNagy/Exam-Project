@@ -39,10 +39,6 @@
             this.vehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vehiclesTableAdapter = new The_Real_Exam.CRMDBDataSetTableAdapters.VehiclesTableAdapter();
             this.tableAdapterManager = new The_Real_Exam.CRMDBDataSetTableAdapters.TableAdapterManager();
-            this.makeTextBox = new System.Windows.Forms.TextBox();
-            this.modelTextBox = new System.Windows.Forms.TextBox();
-            this.yearTextBox = new System.Windows.Forms.TextBox();
-            this.mileageTextBox = new System.Windows.Forms.TextBox();
             this.date_RecievedDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.date_ReturnedDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.vehiclesDataGridView = new System.Windows.Forms.DataGridView();
@@ -60,6 +56,10 @@
             this.btnAddInfo = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.makeTextBox = new System.Windows.Forms.TextBox();
+            this.modelTextBox = new System.Windows.Forms.TextBox();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
+            this.mileageTextBox = new System.Windows.Forms.TextBox();
             makeLabel = new System.Windows.Forms.Label();
             modelLabel = new System.Windows.Forms.Label();
             yearLabel = new System.Windows.Forms.Label();
@@ -145,38 +145,6 @@
             this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = The_Real_Exam.CRMDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VehiclesTableAdapter = this.vehiclesTableAdapter;
-            // 
-            // makeTextBox
-            // 
-            this.makeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Make", true));
-            this.makeTextBox.Location = new System.Drawing.Point(61, 12);
-            this.makeTextBox.Name = "makeTextBox";
-            this.makeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.makeTextBox.TabIndex = 2;
-            // 
-            // modelTextBox
-            // 
-            this.modelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Model", true));
-            this.modelTextBox.Location = new System.Drawing.Point(61, 38);
-            this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(100, 20);
-            this.modelTextBox.TabIndex = 3;
-            // 
-            // yearTextBox
-            // 
-            this.yearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Year", true));
-            this.yearTextBox.Location = new System.Drawing.Point(61, 64);
-            this.yearTextBox.Name = "yearTextBox";
-            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
-            this.yearTextBox.TabIndex = 5;
-            // 
-            // mileageTextBox
-            // 
-            this.mileageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "Mileage", true));
-            this.mileageTextBox.Location = new System.Drawing.Point(61, 90);
-            this.mileageTextBox.Name = "mileageTextBox";
-            this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.mileageTextBox.TabIndex = 7;
             // 
             // date_RecievedDateTimePicker
             // 
@@ -317,11 +285,43 @@
             this.txtSearch.Size = new System.Drawing.Size(162, 20);
             this.txtSearch.TabIndex = 21;
             // 
+            // makeTextBox
+            // 
+            this.makeTextBox.Location = new System.Drawing.Point(61, 12);
+            this.makeTextBox.Name = "makeTextBox";
+            this.makeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.makeTextBox.TabIndex = 23;
+            // 
+            // modelTextBox
+            // 
+            this.modelTextBox.Location = new System.Drawing.Point(61, 38);
+            this.modelTextBox.Name = "modelTextBox";
+            this.modelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.modelTextBox.TabIndex = 24;
+            // 
+            // yearTextBox
+            // 
+            this.yearTextBox.Location = new System.Drawing.Point(61, 64);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
+            this.yearTextBox.TabIndex = 25;
+            // 
+            // mileageTextBox
+            // 
+            this.mileageTextBox.Location = new System.Drawing.Point(61, 90);
+            this.mileageTextBox.Name = "mileageTextBox";
+            this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
+            this.mileageTextBox.TabIndex = 26;
+            // 
             // Vehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 404);
+            this.Controls.Add(this.mileageTextBox);
+            this.Controls.Add(this.yearTextBox);
+            this.Controls.Add(this.modelTextBox);
+            this.Controls.Add(this.makeTextBox);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnClose);
@@ -335,13 +335,9 @@
             this.Controls.Add(date_RecievedLabel);
             this.Controls.Add(this.date_RecievedDateTimePicker);
             this.Controls.Add(mileageLabel);
-            this.Controls.Add(this.mileageTextBox);
             this.Controls.Add(yearLabel);
-            this.Controls.Add(this.yearTextBox);
             this.Controls.Add(modelLabel);
-            this.Controls.Add(this.modelTextBox);
             this.Controls.Add(makeLabel);
-            this.Controls.Add(this.makeTextBox);
             this.Name = "Vehicles";
             this.Text = "Vehicles";
             this.Load += new System.EventHandler(this.Vehicles_Load);
@@ -359,10 +355,6 @@
         private System.Windows.Forms.BindingSource vehiclesBindingSource;
         private CRMDBDataSetTableAdapters.VehiclesTableAdapter vehiclesTableAdapter;
         private CRMDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox makeTextBox;
-        private System.Windows.Forms.TextBox modelTextBox;
-        private System.Windows.Forms.TextBox yearTextBox;
-        private System.Windows.Forms.TextBox mileageTextBox;
         private System.Windows.Forms.DateTimePicker date_RecievedDateTimePicker;
         private System.Windows.Forms.DateTimePicker date_ReturnedDateTimePicker;
         private System.Windows.Forms.DataGridView vehiclesDataGridView;
@@ -380,5 +372,9 @@
         private System.Windows.Forms.Button btnAddInfo;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox makeTextBox;
+        private System.Windows.Forms.TextBox modelTextBox;
+        private System.Windows.Forms.TextBox yearTextBox;
+        private System.Windows.Forms.TextBox mileageTextBox;
     }
 }
